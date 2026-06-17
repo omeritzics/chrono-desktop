@@ -7,10 +7,12 @@ Future<void> initializeQuickActions(
   const QuickActions quickActions = QuickActions();
   await quickActions.initialize((shortcutType) {
     if (shortcutType == 'action_add_alarm') {
-      setTab(getTabs(context).indexWhere((tab) => tab.id == "alarm"), "add_alarm");
+      setTab(
+          getTabs(context).indexWhere((tab) => tab.id == "alarm"), "add_alarm");
     }
     if (shortcutType == 'action_add_timer') {
-      setTab(getTabs(context).indexWhere((tab) => tab.id == "timer"), "add_timer");
+      setTab(
+          getTabs(context).indexWhere((tab) => tab.id == "timer"), "add_timer");
     }
     // More handling code...
   });

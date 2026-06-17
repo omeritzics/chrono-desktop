@@ -40,8 +40,6 @@ class RingtonePlayer {
     await _play(ringtoneUri, vibrate: vibrate, loopMode: LoopMode.one);
   }
 
-
- 
   static Future<void> playAlarm(Alarm alarm,
       {LoopMode loopMode = LoopMode.one}) async {
     await activePlayer?.stop();

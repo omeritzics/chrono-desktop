@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:isolate';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:clock_app/audio/logic/ringtones.dart';
@@ -27,7 +26,7 @@ import 'package:clock_app/common/widgets/fab.dart';
 import 'package:clock_app/common/widgets/list/persistent_list_view.dart';
 import 'package:clock_app/timer/types/timer.dart';
 import 'package:clock_app/timer/widgets/timer_card.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 // Future<bool> updateForegroundTask(List<ClockTimer> timers) async {
 //   final runningTimers = timers.where((timer) => !timer.isStopped).toList();
@@ -107,7 +106,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 //     // _sendPort?.send('onNotificationPressed');
 //   }
 // }
-
 
 class TimerScreen extends StatefulWidget {
   const TimerScreen({super.key, this.actionController});

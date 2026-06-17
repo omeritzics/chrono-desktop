@@ -6,7 +6,7 @@ class ListenerManager {
     if (listeners == null) {
       _listeners[key] = [listener];
     } else {
-      if(listeners.contains(listener)) {
+      if (listeners.contains(listener)) {
         return;
       }
       listeners.add(listener);

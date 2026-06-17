@@ -21,8 +21,7 @@ import 'package:clock_app/navigation/types/quick_action_controller.dart';
 import 'package:clock_app/settings/data/settings_schema.dart';
 import 'package:clock_app/settings/types/setting.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class AlarmScreen extends StatefulWidget {
   const AlarmScreen({super.key, this.actionController});
@@ -130,10 +129,8 @@ class _AlarmScreenState extends State<AlarmScreen> {
       DateTime? nextScheduleDateTime = alarm.currentScheduleDateTime;
       if (nextScheduleDateTime == null) return;
       ScaffoldMessenger.of(context).showSnackBar(getThemedSnackBar(
-      context,
-          getNewAlarmText(context, alarm),
-          fab: true,
-          navBar: true));
+          context, getNewAlarmText(context, alarm),
+          fab: true, navBar: true));
     });
   }
 

@@ -35,8 +35,6 @@ class SelectField extends StatefulWidget {
 
 class _SelectFieldState<T> extends State<SelectField> {
   Widget _getFieldCard(List<SelectChoice> choices, List<int> selectedIndices) {
-
-
     if (widget.multiSelect) {
       List<SelectChoice> selectedChoices =
           selectedIndices.map((index) => choices[index]).toList();
@@ -81,7 +79,7 @@ class _SelectFieldState<T> extends State<SelectField> {
 
   @override
   Widget build(BuildContext context) {
-     List<SelectChoice> choices = widget.getChoices();
+    List<SelectChoice> choices = widget.getChoices();
     List<int> selectedIndices = widget.getSelectedIndices();
 
     void showSelect(List<int>? selectedIndices) async {

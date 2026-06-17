@@ -5,7 +5,8 @@ import 'package:clock_app/alarm/logic/alarm_isolate.dart';
 import 'package:clock_app/stopwatch/types/stopwatch.dart';
 import 'package:clock_app/common/utils/list_storage.dart';
 
-Future<void> updateStopwatch(Future<void> Function(ClockStopwatch) callback) async {
+Future<void> updateStopwatch(
+    Future<void> Function(ClockStopwatch) callback) async {
   List<ClockStopwatch> stopwatches = await loadList("stopwatches");
   // int timerIndex = timers.indexWhere((timer) => timer.id == scheduleId);
   // if(timerIndex == -1) return;

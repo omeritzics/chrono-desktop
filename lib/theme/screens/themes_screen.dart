@@ -54,7 +54,7 @@ class _ThemesScreenState<Item extends ThemeItem>
     );
   }
 
-  _handleCustomizeItem(Item themeItem) async {
+  Future<void> _handleCustomizeItem(Item themeItem) async {
     int index = _listController.getItemIndex(themeItem);
     await _openCustomizeItemScreen(
       themeItem,

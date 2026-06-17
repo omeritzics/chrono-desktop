@@ -1,4 +1,5 @@
 import 'package:clock_app/app.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 import 'package:clock_app/settings/data/settings_schema.dart';
 import 'package:clock_app/settings/types/setting.dart';
 import 'package:clock_app/settings/types/setting_enable_condition.dart';
@@ -10,8 +11,6 @@ import 'package:clock_app/theme/types/style_theme.dart';
 import 'package:clock_app/theme/types/theme_brightness.dart';
 import 'package:clock_app/theme/utils/color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 
 SettingGroup appearanceSettingsSchema = SettingGroup(
   "Appearance",

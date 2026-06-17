@@ -35,7 +35,6 @@ class _ColorFieldState extends State<ColorField> {
               value: widget.value,
               onChange: widget.onChange,
               enableOpacity: widget.enableOpacity,
-                          
             );
           },
         );

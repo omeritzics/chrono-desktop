@@ -23,7 +23,6 @@ final NotificationChannel alarmNotificationChannel = NotificationChannel(
   enableLights: false,
 );
 
-
 // final NotificationChannel foregroundNotificationChannel = NotificationChannel(
 //   icon: 'resource://drawable/alarm_icon',
 //   // channelGroupKey: chronoNotificationChannelGroupKey,
@@ -38,7 +37,6 @@ final NotificationChannel alarmNotificationChannel = NotificationChannel(
 //   enableVibration: false,
 //   enableLights: false,
 // );
-
 
 final NotificationChannel reminderNotificationChannel = NotificationChannel(
   icon: 'resource://drawable/alarm_icon',

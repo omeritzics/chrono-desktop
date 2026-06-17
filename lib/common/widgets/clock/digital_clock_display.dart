@@ -137,7 +137,7 @@ class _DigitalClockDisplayState extends State<DigitalClockDisplay> {
             height: 1,
             dateTime: widget.dateTime,
             color: widget.color ??
-                Theme.of(context).colorScheme.onBackground.withOpacity(0.8),
+                Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
           ),
       ],
     );

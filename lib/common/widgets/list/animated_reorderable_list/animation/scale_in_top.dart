@@ -1,7 +1,6 @@
 import 'package:clock_app/common/widgets/list/animated_reorderable_list/animation/provider/animation_effect.dart';
 import 'package:flutter/cupertino.dart';
 
-
 class ScaleInTop extends AnimationEffect<double> {
   static const double beginValue = 0.0;
   static const double endValue = 1.0;

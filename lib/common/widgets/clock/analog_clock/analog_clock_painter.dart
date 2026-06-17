@@ -37,7 +37,7 @@ class AnalogClockPainter extends CustomPainter {
   final bool showDigitalClock;
   final ClockTicksType ticksType;
   final ClockNumbersType numbersType;
-    final ClockNumeralType numeralType;
+  final ClockNumeralType numeralType;
   final bool showSecondHand;
   final bool showTicksInsteadOfMinorNumbers;
   final bool useMilitaryTime;
@@ -97,7 +97,7 @@ class AnalogClockPainter extends CustomPainter {
     return oldDelegate.dateTime.isBefore(dateTime);
   }
 
-  _paintPinHole(canvas, size, scaleFactor) {
+  void _paintPinHole(canvas, size, scaleFactor) {
     Paint midPointStrokePainter = Paint()
       ..color = showSecondHand ? secondHandColor : minuteHandColor
       ..strokeWidth = strokeWidth * scaleFactor

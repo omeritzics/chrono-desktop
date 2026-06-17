@@ -293,7 +293,7 @@ class _CustomListViewState<Item extends ListItem>
             .toList();
   }
 
-  _getItemBuilder() {
+  Widget Function(BuildContext context, int index) _getItemBuilder() {
     return (BuildContext context, int index) {
       Item item = currentList[index];
       for (var filter in widget.listFilters) {
@@ -374,7 +374,7 @@ class _CustomListViewState<Item extends ListItem>
                       child: Text(
                         widget.placeholderText,
                         style: textTheme.displaySmall?.copyWith(
-                          color: colorScheme.onBackground.withOpacity(0.6),
+                          color: colorScheme.onSurface.withValues(alpha: 0.6),
                         ),
                       ),
                     ),

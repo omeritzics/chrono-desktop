@@ -1,5 +1,3 @@
-import 'package:clock_app/developer/logic/logger.dart';
-import 'package:clock_app/settings/data/settings_schema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,8 +26,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
 
     // final bool showBackButton = Navigator.of(context).canPop();
 
-    final systemNavigationBarColor =
-        systemNavBarColor ?? colorScheme.background;
+    final systemNavigationBarColor = systemNavBarColor ?? colorScheme.surface;
 
     Brightness statusBarIconBrightness =
         colorScheme.surface.computeLuminance() > 0.179
@@ -45,7 +42,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
             ? Text(
                 title!,
                 style: textTheme.titleMedium?.copyWith(
-                  color: colorScheme.onBackground.withOpacity(0.6),
+                  color: colorScheme.onSurface.withValues(alpha: 0.6),
                 ),
               )
             : null);
@@ -62,7 +59,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
             systemNavigationBarColor: systemNavigationBarColor,
             systemNavigationBarDividerColor: Colors.transparent,
             systemNavigationBarIconBrightness: systemNavBarIconBrightness,
-            statusBarColor: colorScheme.background,
+            statusBarColor: colorScheme.surface,
             statusBarIconBrightness:
                 statusBarIconBrightness, // For Android (dark icons)
           ),
@@ -76,7 +73,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
               if (showBackButton) ...[
                 IconButton(
                     icon: Icon(Icons.arrow_back,
-                        color: colorScheme.onSurface.withOpacity(0.8)),
+                        color: colorScheme.onSurface.withValues(alpha: 0.8)),
                     onPressed: () => Navigator.of(context).pop(),
                     padding: EdgeInsets.zero),
                 const SizedBox(width: 8)
@@ -89,7 +86,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
           elevation: 0,
           automaticallyImplyLeading: false,
           iconTheme: IconThemeData(
-            color: colorScheme.onSurface.withOpacity(0.8),
+            color: colorScheme.onSurface.withValues(alpha: 0.8),
           ),
           titleTextStyle: textTheme.titleMedium?.copyWith(
             color: colorScheme.onSurface,

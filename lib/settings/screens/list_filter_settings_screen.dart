@@ -1,11 +1,10 @@
 import 'package:clock_app/common/types/tag.dart';
 import 'package:clock_app/common/widgets/fab.dart';
-import 'package:clock_app/common/widgets/fields/input_bottom_sheet.dart';
 import 'package:clock_app/common/widgets/list/persistent_list_view.dart';
 import 'package:clock_app/navigation/widgets/app_top_bar.dart';
 import 'package:clock_app/settings/widgets/tag_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class ListFilterSettingsScreen extends StatefulWidget {
   const ListFilterSettingsScreen({

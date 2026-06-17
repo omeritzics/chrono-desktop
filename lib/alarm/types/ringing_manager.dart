@@ -1,4 +1,3 @@
-
 // This class is used to keep track of what alarms/timers are currently ringing
 class RingingManager {
   static int _ringingAlarmId = -1;

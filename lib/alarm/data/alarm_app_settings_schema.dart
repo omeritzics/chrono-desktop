@@ -1,7 +1,7 @@
 import 'package:clock_app/alarm/data/alarm_settings_schema.dart';
 import 'package:clock_app/alarm/types/notification_action.dart';
-import 'package:clock_app/common/types/list_filter.dart';
 import 'package:clock_app/icons/flux_icons.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 import 'package:clock_app/notifications/widgets/notification_actions/area_notification_action.dart';
 import 'package:clock_app/notifications/widgets/notification_actions/buttons_notification_action.dart';
 import 'package:clock_app/notifications/widgets/notification_actions/slide_notification_action.dart';
@@ -10,7 +10,6 @@ import 'package:clock_app/settings/types/setting_enable_condition.dart';
 import 'package:clock_app/settings/types/setting_group.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 SettingGroup alarmAppSettingsSchema = SettingGroup(
   "Alarm",
@@ -74,37 +73,36 @@ SettingGroup alarmAppSettingsSchema = SettingGroup(
         ]),
     SettingGroup("Filters",
         (context) => AppLocalizations.of(context)!.filtersSettingGroup, [
-    //      CustomizableListSetting<ListFilter>(
-    //   "Tasks",
-    //   (context) => AppLocalizations.of(context)!.tasksSetting,
-    //   [],
-    //   // kDebugMode
-    //   // ? [AlarmTask(AlarmTaskType.math), AlarmTask(AlarmTaskType.sequence)]
-    //   // : [],
-    //   alarmTaskSchemasMap.keys.map((key) => AlarmTask(key)).toList(),
-    //   addCardBuilder: (item) => AlarmTaskCard(task: item, isAddCard: true),
-    //   cardBuilder: (item, [onDelete, onDuplicate]) => AlarmTaskCard(
-    //     task: item,
-    //     isAddCard: false,
-    //     onPressDelete: onDelete,
-    //     onPressDuplicate: onDuplicate,
-    //   ),
-    //   valueDisplayBuilder: (context, setting) {
-    //     return Text("${setting.value.length} tasks");
-    //   },
-    //   itemPreviewBuilder: (item) => TryAlarmTaskButton(alarmTask: item),
-    //   // onChange: (context, value)async{
-    //   //   await appSettings.save();
-    //   // }
-    // ),
+      //      CustomizableListSetting<ListFilter>(
+      //   "Tasks",
+      //   (context) => AppLocalizations.of(context)!.tasksSetting,
+      //   [],
+      //   // kDebugMode
+      //   // ? [AlarmTask(AlarmTaskType.math), AlarmTask(AlarmTaskType.sequence)]
+      //   // : [],
+      //   alarmTaskSchemasMap.keys.map((key) => AlarmTask(key)).toList(),
+      //   addCardBuilder: (item) => AlarmTaskCard(task: item, isAddCard: true),
+      //   cardBuilder: (item, [onDelete, onDuplicate]) => AlarmTaskCard(
+      //     task: item,
+      //     isAddCard: false,
+      //     onPressDelete: onDelete,
+      //     onPressDuplicate: onDuplicate,
+      //   ),
+      //   valueDisplayBuilder: (context, setting) {
+      //     return Text("${setting.value.length} tasks");
+      //   },
+      //   itemPreviewBuilder: (item) => TryAlarmTaskButton(alarmTask: item),
+      //   // onChange: (context, value)async{
+      //   //   await appSettings.save();
+      //   // }
+      // ),
 
       SwitchSetting("Show Filters",
           (context) => AppLocalizations.of(context)!.showFiltersSetting, true),
       SwitchSetting("Show Sort",
           (context) => AppLocalizations.of(context)!.showSortSetting, true),
-          SwitchSetting("Show Next Alarm",
+      SwitchSetting("Show Next Alarm",
           (context) => AppLocalizations.of(context)!.showNextAlarm, false),
-
     ]),
     SettingGroup(
       "Notifications",

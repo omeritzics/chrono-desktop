@@ -2,8 +2,7 @@ import 'package:clock_app/common/data/weekdays.dart';
 import 'package:clock_app/common/types/weekday.dart';
 
 bool weekdaysContains(List<Weekday> alarmWeekdays, int id) {
-  Weekday weekday =
-      weekdays.firstWhere((weekday) => weekday.id == id);
+  Weekday weekday = weekdays.firstWhere((weekday) => weekday.id == id);
   return alarmWeekdays.contains(weekday);
 }
 

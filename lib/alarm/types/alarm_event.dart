@@ -9,13 +9,14 @@ import 'package:clock_app/common/utils/id.dart';
 // }
 
 class AlarmEvent extends ListItem {
-  late  int id;
+  @override
+  late int id;
   // late  final AlarmEventType type;
-  late  DateTime eventTime;
-  late  ScheduledNotificationType notificationType;
-  late  String description;
-  late  int scheduleId;
-  late  DateTime startDate;
+  late DateTime eventTime;
+  late ScheduledNotificationType notificationType;
+  late String description;
+  late int scheduleId;
+  late DateTime startDate;
   late bool isActive;
 
   AlarmEvent({
@@ -89,7 +90,5 @@ class AlarmEvent extends ListItem {
     scheduleId = other.scheduleId;
     startDate = other.startDate;
     isActive = other.isActive;
-      
-
   }
 }

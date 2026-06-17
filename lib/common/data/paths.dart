@@ -46,6 +46,6 @@ Future<String> getLogsFilePath() async {
   return path.join(await getAppDataDirectoryPath(), "logs.txt");
 }
 
-String getLogsFilePathSync(){
+String getLogsFilePathSync() {
   return path.join(getAppDataDirectoryPathSync(), "logs.txt");
 }

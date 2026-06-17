@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 Future<Item?> openCustomizeScreen<Item extends ListItem>(
   BuildContext context,
   Widget widget, {
-  Future<void>  Function(Item newItem)? onSave,
-  Future<void>  Function()? onCancel,
+  Future<void> Function(Item newItem)? onSave,
+  Future<void> Function()? onCancel,
 }) async {
   ScaffoldMessenger.of(context).removeCurrentSnackBar();
   Item? item = await Navigator.push(

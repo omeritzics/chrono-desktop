@@ -1,6 +1,6 @@
 import 'package:clock_app/alarm/types/alarm.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 String getRemainingAlarmTimeText(BuildContext context, Alarm alarm) {
   Duration etaNextAlarm =
@@ -45,7 +45,8 @@ String getShortRemainingAlarmTimeText(BuildContext context, Alarm alarm) {
     int hours = etaNextAlarm.inHours;
     int minutes = etaNextAlarm.inMinutes % 60;
     if (minutes > 0) {
-      etaText = '${localizations.shortHoursString(hours)} ${localizations.shortMinutesString(minutes)}';
+      etaText =
+          '${localizations.shortHoursString(hours)} ${localizations.shortMinutesString(minutes)}';
     } else {
       etaText = localizations.shortHoursString(hours);
     }

@@ -17,7 +17,7 @@ class AppVisibility {
     // if (loadTextFileSync(fullscreenIntentKey) == "true") {
     //   saveTextFile(fullscreenIntentKey, "false");
     // } else {
-      // setState(FGBGType.foreground);
+    // setState(FGBGType.foreground);
     // }
 
     subscription = FGBGEvents.stream.listen((event) {

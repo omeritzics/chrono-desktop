@@ -7,7 +7,7 @@ class AlarmRunner extends JsonSerializable {
   late int _id;
   DateTime? _currentScheduleDateTime;
 
-  get id => _id;
+  int get id => _id;
   DateTime? get currentScheduleDateTime => _currentScheduleDateTime;
 
   AlarmRunner() {

@@ -64,7 +64,8 @@ class _FileItemCardState extends State<FileItemCard> {
               const EdgeInsets.only(left: 16.0, right: 4, top: 8, bottom: 8),
           child: Row(
             children: [
-              Icon(getFileItemIcon(widget.fileItem, isPlaying), color: colorScheme.primary),
+              Icon(getFileItemIcon(widget.fileItem, isPlaying),
+                  color: colorScheme.primary),
               const SizedBox(width: 12),
               Expanded(
                 flex: 999,

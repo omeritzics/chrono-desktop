@@ -1,13 +1,12 @@
-import 'dart:io';
 
 import 'package:clock_app/alarm/screens/alarm_events_screen.dart';
 import 'package:clock_app/developer/screens/logs_screen.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 import 'package:clock_app/settings/types/setting.dart';
 import 'package:clock_app/settings/types/setting_group.dart';
 import 'package:clock_app/settings/types/setting_link.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 SettingGroup developerSettingsSchema = SettingGroup(
   "Developer Options",
@@ -37,12 +36,11 @@ SettingGroup developerSettingsSchema = SettingGroup(
           "alarm_logs",
           (context) => AppLocalizations.of(context)!.alarmLogSetting,
           const AlarmEventsScreen()),
-       SettingPageLink(
+      SettingPageLink(
           "app_logs",
           (context) => AppLocalizations.of(context)!.appLogs,
           const LogsScreen()),
-
-        ]),
+    ]),
   ],
   icon: Icons.code_rounded,
 );

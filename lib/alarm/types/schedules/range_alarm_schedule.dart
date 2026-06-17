@@ -42,7 +42,8 @@ class RangeAlarmSchedule extends AlarmSchedule {
   }
 
   @override
-  Future<void> schedule(Time time, String description, [bool alarmClock = false]) async {
+  Future<void> schedule(Time time, String description,
+      [bool alarmClock = false]) async {
     int intervalDays = interval == RangeInterval.daily ? 1 : 7;
     // All the dates are not scheduled at once
     // Instead we schedule the next date after the current one is finished

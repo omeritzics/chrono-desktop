@@ -37,13 +37,13 @@ class _TimerNotificationScreenState extends State<TimerNotificationScreen> {
       );
 
   void _addTime() {
-    dismissAlarmNotification(widget.scheduleIds[0],
-        AlarmDismissType.snooze, ScheduledNotificationType.timer);
+    dismissAlarmNotification(widget.scheduleIds[0], AlarmDismissType.snooze,
+        ScheduledNotificationType.timer);
   }
 
   void _stop() {
-    dismissAlarmNotification(widget.scheduleIds[0],
-        AlarmDismissType.dismiss, ScheduledNotificationType.timer);
+    dismissAlarmNotification(widget.scheduleIds[0], AlarmDismissType.dismiss,
+        ScheduledNotificationType.timer);
   }
 
   @override

@@ -7,7 +7,7 @@ import 'package:clock_app/common/widgets/card_container.dart';
 import 'package:clock_app/common/widgets/list/action_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class ListFilterChip<Item extends ListItem> extends StatelessWidget {
   const ListFilterChip({
@@ -15,7 +15,6 @@ class ListFilterChip<Item extends ListItem> extends StatelessWidget {
     required this.listFilter,
     required this.onChange,
     this.isEnabled = true,
-      
   });
 
   final ListFilter<Item> listFilter;
@@ -61,15 +60,13 @@ class ListButtonChip<Item extends ListItem> extends StatelessWidget {
     required this.icon,
     this.isActive = false,
     this.isEnabled = true,
-      
   });
 
   final String? label;
   final IconData? icon;
   final Function()? onTap;
   final bool isActive;
-     final bool isEnabled;
-
+  final bool isEnabled;
 
   @override
   Widget build(BuildContext context) {
@@ -174,7 +171,7 @@ class ListFilterActionChip<Item extends ListItem> extends StatelessWidget {
               child: Text(
                 activeFilterCount.toString(),
                 style: textTheme.headlineSmall?.copyWith(
-                  color: colorScheme.onPrimary.withOpacity(0.6),
+                  color: colorScheme.onPrimary.withValues(alpha: 0.6),
                 ),
               ),
             ),
@@ -189,14 +186,12 @@ class ListFilterSelectChip<Item extends ListItem> extends StatelessWidget {
   final FilterSelect<Item> listFilter;
   final VoidCallback onChange;
   final bool isEnabled;
-   
 
   const ListFilterSelectChip({
     super.key,
     required this.listFilter,
     required this.onChange,
     this.isEnabled = true,
-      
   });
 
   @override
@@ -248,8 +243,8 @@ class ListFilterSelectChip<Item extends ListItem> extends StatelessWidget {
               child: Icon(
                 Icons.keyboard_arrow_down_rounded,
                 color: isFirstSelected
-                    ? colorScheme.onSurface.withOpacity(0.6)
-                    : colorScheme.onPrimary.withOpacity(0.6),
+                    ? colorScheme.onSurface.withValues(alpha: 0.6)
+                    : colorScheme.onPrimary.withValues(alpha: 0.6),
               ),
             ),
           ],
@@ -263,7 +258,6 @@ class ListFilterMultiSelectChip<Item extends ListItem> extends StatelessWidget {
   final FilterMultiSelect<Item> listFilter;
   final VoidCallback onChange;
   final bool isEnabled;
-   
 
   const ListFilterMultiSelectChip({
     super.key,
@@ -324,8 +318,8 @@ class ListFilterMultiSelectChip<Item extends ListItem> extends StatelessWidget {
               child: Icon(
                 Icons.keyboard_arrow_down_rounded,
                 color: isSelected
-                    ? colorScheme.onPrimary.withOpacity(0.6)
-                    : colorScheme.onSurface.withOpacity(0.6),
+                    ? colorScheme.onPrimary.withValues(alpha: 0.6)
+                    : colorScheme.onSurface.withValues(alpha: 0.6),
               ),
             ),
           ],
@@ -347,7 +341,6 @@ class ListSortChip<Item extends ListItem> extends StatelessWidget {
     required this.onChange,
     required this.selectedIndex,
     this.isEnabled = true,
-      
   });
 
   @override
@@ -391,7 +384,7 @@ class ListSortChip<Item extends ListItem> extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 2.0, right: 8.0),
               child: Icon(Icons.keyboard_arrow_down_rounded,
-                  color: colorScheme.onSurface.withOpacity(0.6)),
+                  color: colorScheme.onSurface.withValues(alpha: 0.6)),
             ),
           ],
         ),

@@ -55,7 +55,7 @@ class _ToggleFieldState<T> extends State<ToggleField<T>> {
           ],
           ToggleButtons(
             // c
-            color: colorScheme.onBackground,
+            color: colorScheme.onSurface,
             fillColor: colorScheme.primary,
             selectedColor: colorScheme.onPrimary,
             // renderBorder: false,

@@ -312,8 +312,6 @@ class _TimePickerSpinnerState extends State<TimePickerSpinner> {
 
   @override
   Widget build(BuildContext context) {
-
-
     List<Widget> contents = [
       SizedBox(
         width: _getItemWidth(),
@@ -478,7 +476,7 @@ class _TimePickerSpinnerState extends State<TimePickerSpinner> {
         isScrolling
             ? Positioned.fill(
                 child: Container(
-                color: Colors.black.withOpacity(0),
+                color: Colors.black.withValues(alpha: 0),
               ))
             : Container()
       ],

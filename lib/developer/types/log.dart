@@ -1,6 +1,5 @@
 import 'package:clock_app/common/types/json.dart';
 import 'package:clock_app/common/types/list_item.dart';
-import 'package:clock_app/common/utils/id.dart';
 import 'package:intl/intl.dart';
 import 'package:logger/logger.dart';
 
@@ -43,7 +42,7 @@ class Log extends ListItem {
 
   @override
   copy() {
-    return Log(id,message, dateTime, level);
+    return Log(id, message, dateTime, level);
   }
 
   @override

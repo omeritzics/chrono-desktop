@@ -7,24 +7,17 @@ class SliverGridWithCustomGeometryLayout extends SliverGridRegularTileLayout {
 
   const SliverGridWithCustomGeometryLayout({
     required this.geometryBuilder,
-    required int crossAxisCount,
-    required double mainAxisStride,
-    required double crossAxisStride,
-    required double childMainAxisExtent,
-    required double childCrossAxisExtent,
-    required bool reverseCrossAxis,
+    required super.crossAxisCount,
+    required super.mainAxisStride,
+    required super.crossAxisStride,
+    required super.childMainAxisExtent,
+    required super.childCrossAxisExtent,
+    required super.reverseCrossAxis,
   })  : assert(crossAxisCount > 0),
         assert(mainAxisStride >= 0),
         assert(crossAxisStride >= 0),
         assert(childMainAxisExtent >= 0),
-        assert(childCrossAxisExtent >= 0),
-        super(
-            crossAxisCount: crossAxisCount,
-            mainAxisStride: mainAxisStride,
-            crossAxisStride: crossAxisStride,
-            childMainAxisExtent: childMainAxisExtent,
-            childCrossAxisExtent: childCrossAxisExtent,
-            reverseCrossAxis: reverseCrossAxis);
+        assert(childCrossAxisExtent >= 0);
 
   @override
   SliverGridGeometry getGeometryForChildIndex(int index) {
@@ -43,21 +36,26 @@ class SliverGridWithCustomGeometryLayout extends SliverGridRegularTileLayout {
 class SliverReorderableGridDelegateWithFixedCrossAxisCount
     extends SliverGridDelegateWithFixedCrossAxisCount {
   /// The number of children in the cross axis.
+  @override
   final int crossAxisCount;
 
   /// The number of logical pixels between each child along the main axis.
+  @override
   final double mainAxisSpacing;
 
   /// The number of logical pixels between each child along the cross axis.
+  @override
   final double crossAxisSpacing;
 
   /// The ratio of the cross-axis to the main-axis extent of each child.
+  @override
   final double childAspectRatio;
 
   /// The extent of each tile in the main axis. If provided it would define the
   /// logical pixels taken by each tile in the main-axis.
   ///
   /// If null, [childAspectRatio] is used instead.
+  @override
   final double? mainAxisExtent;
 
   double childCrossAxisExtent = 0.0;

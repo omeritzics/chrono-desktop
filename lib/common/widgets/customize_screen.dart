@@ -1,7 +1,7 @@
 import 'package:clock_app/common/types/list_item.dart';
 import 'package:clock_app/navigation/widgets/app_top_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class CustomizeState {
   bool isSaved = false;
@@ -50,7 +50,7 @@ class _CustomizeScreenState<Item extends CustomizableListItem>
           child: Text(
             AppLocalizations.of(context)!.cancelButton,
             style: TextStyle(
-              color: colorScheme.onSurface.withOpacity(0.6),
+              color: colorScheme.onSurface.withValues(alpha: 0.6),
             ),
           ),
         ),

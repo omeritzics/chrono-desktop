@@ -34,7 +34,7 @@ class CustomizableListSettingAddBottomSheet<Item extends CustomizableListItem>
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(64),
-                    color: theme.colorScheme.onSurface.withOpacity(0.6)),
+                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6)),
               ),
             ),
             const SizedBox(height: 12.0),
@@ -46,7 +46,8 @@ class CustomizableListSettingAddBottomSheet<Item extends CustomizableListItem>
                   Text(
                     "Choose Task to Add",
                     style: theme.textTheme.titleMedium?.copyWith(
-                        color: theme.colorScheme.onSurface.withOpacity(0.6)),
+                        color:
+                            theme.colorScheme.onSurface.withValues(alpha: 0.6)),
                   ),
                 ],
               ),

@@ -14,7 +14,6 @@ class ToggleSettingCard<T> extends StatefulWidget {
   final bool showAsCard;
   final void Function(T)? onChanged;
 
-
   @override
   State<ToggleSettingCard<T>> createState() => _ToggleSettingCardState<T>();
 }

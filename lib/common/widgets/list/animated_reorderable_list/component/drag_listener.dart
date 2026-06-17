@@ -32,7 +32,7 @@ class ReorderableGridDragStartListener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Listener(
-    behavior: HitTestBehavior.translucent,
+      behavior: HitTestBehavior.translucent,
       onPointerDown: enabled
           ? (PointerDownEvent event) => _startDragging(context, event)
           : null,
@@ -47,7 +47,8 @@ class ReorderableGridDragStartListener extends StatelessWidget {
   /// subclasses can use this to customize the drag start gesture.
   @protected
   MultiDragGestureRecognizer createRecognizer() {
-    return DelayedMultiDragGestureRecognizer(debugOwner: this,delay: const Duration(milliseconds: 1));
+    return DelayedMultiDragGestureRecognizer(
+        debugOwner: this, delay: const Duration(milliseconds: 1));
   }
 
   void _startDragging(BuildContext context, PointerDownEvent event) {

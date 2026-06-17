@@ -82,5 +82,4 @@ class Time extends JsonSerializable {
 
   @override
   int get hashCode => Object.hash(hour, minute, second);
-
 }

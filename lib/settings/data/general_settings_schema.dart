@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:app_settings/app_settings.dart';
 import 'package:auto_start_flutter/auto_start_flutter.dart';
-import 'package:background_fetch/background_fetch.dart';
 import 'package:clock_app/app.dart';
 import 'package:clock_app/audio/screens/ringtones_screen.dart';
 import 'package:clock_app/clock/types/time.dart';
@@ -12,6 +11,7 @@ import 'package:clock_app/common/utils/list_storage.dart';
 import 'package:clock_app/common/utils/snackbar.dart';
 import 'package:clock_app/common/utils/time_format.dart';
 import 'package:clock_app/icons/flux_icons.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 import 'package:clock_app/l10n/language_local.dart';
 import 'package:clock_app/notifications/logic/notifications.dart';
 import 'package:clock_app/settings/screens/tags_screen.dart';
@@ -28,7 +28,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 enum TimePickerType { dial, input, spinner }
 

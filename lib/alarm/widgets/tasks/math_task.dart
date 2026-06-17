@@ -91,7 +91,6 @@ class _MathTaskState extends State<MathTask> {
     _problemsSolved = 0;
     _difficultyLevel.generateProblem();
     _textController.clear();
-      
   }
 
   @override

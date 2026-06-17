@@ -130,13 +130,13 @@ class _MemoryTaskState extends State<MemoryTask> with TickerProviderStateMixin {
                     ),
                     back: CardContainer(
                       margin: const EdgeInsets.all(4.0),
-                      color: card.isCompleted ? Colors.green : Colors.orangeAccent,
+                      color:
+                          card.isCompleted ? Colors.green : Colors.orangeAccent,
                       child: Center(
                         child: Text(
                           '${card.value}',
                           style: textTheme.displayMedium?.copyWith(
                             color: Colors.white,
-                                                      
                           ),
                         ),
                       ),

@@ -5,7 +5,7 @@ import 'package:clock_app/common/widgets/card_container.dart';
 import 'package:clock_app/navigation/widgets/app_top_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 Future<dynamic> readDonors() async {
   final String response =
@@ -61,8 +61,8 @@ class DonorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final TextTheme textTheme = theme.textTheme;
-    final Color color =
-        Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+    final Color color = Color((Random().nextDouble() * 0xFFFFFF).toInt())
+        .withValues(alpha: 1.0);
     return CardContainer(
       // onTap: () async {
       //   if (contributor['profile_url'] != null) {

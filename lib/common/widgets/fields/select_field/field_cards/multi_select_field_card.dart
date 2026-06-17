@@ -25,7 +25,7 @@ class MultiSelectFieldCard extends StatelessWidget {
             ),
             const Spacer(),
             Icon(Icons.keyboard_arrow_down_rounded,
-                color: colorScheme.onBackground.withOpacity(0.6))
+                color: colorScheme.onSurface.withValues(alpha: 0.6))
           ],
         ),
         const SizedBox(height: 4.0),

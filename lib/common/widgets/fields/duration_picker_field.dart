@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 class DurationPickerField<T> extends StatefulWidget {
   const DurationPickerField({
-    Key? key,
+    super.key,
     required this.title,
     this.description,
     required this.onChange,
     required this.value,
-  }) : super(key: key);
+  });
 
   final TimeDuration value;
   final String title;
@@ -68,8 +68,10 @@ class _DurationPickerFieldState<T> extends State<DurationPickerField<T>> {
               const Spacer(),
               Icon(
                 Icons.access_time_rounded,
-                color:
-                    Theme.of(context).colorScheme.onBackground.withOpacity(0.6),
+                color: Theme.of(context)
+                    .colorScheme
+                    .onSurface
+                    .withValues(alpha: 0.6),
               )
             ],
           ),

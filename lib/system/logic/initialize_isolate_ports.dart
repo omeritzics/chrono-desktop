@@ -5,8 +5,8 @@ import 'package:clock_app/alarm/logic/alarm_isolate.dart';
 import 'package:clock_app/developer/logic/logger.dart';
 import 'package:clock_app/settings/types/listener_manager.dart';
 
-void initializeIsolatePorts(){
-    ReceivePort receivePort = ReceivePort();
+void initializeIsolatePorts() {
+  ReceivePort receivePort = ReceivePort();
   IsolateNameServer.removePortNameMapping(updatePortName);
   IsolateNameServer.registerPortWithName(receivePort.sendPort, updatePortName);
   printIsolateInfo();

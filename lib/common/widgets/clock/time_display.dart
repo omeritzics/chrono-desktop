@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 
 class TimeDisplay extends StatelessWidget {
   const TimeDisplay({
-
     super.key,
     required this.format,
     required this.fontSize,
@@ -22,7 +21,8 @@ class TimeDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Locale locale = Localizations.localeOf(context);
-    String formattedTime = DateFormat(format, locale.languageCode).format(dateTime);
+    String formattedTime =
+        DateFormat(format, locale.languageCode).format(dateTime);
     return Text(
       formattedTime,
       style: Theme.of(context).textTheme.displaySmall?.copyWith(

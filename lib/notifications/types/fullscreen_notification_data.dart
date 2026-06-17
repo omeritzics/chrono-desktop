@@ -11,5 +11,3 @@ class FullScreenNotificationData {
 }
 
 typedef Payload = Json;
-
-

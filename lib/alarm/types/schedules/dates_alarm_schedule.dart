@@ -55,7 +55,8 @@ class DatesAlarmSchedule extends AlarmSchedule {
   }
 
   @override
-  Future<void> schedule(Time time, String description, [bool alarmClock = false]) async {
+  Future<void> schedule(Time time, String description,
+      [bool alarmClock = false]) async {
     List<DateTime> dates = _datesSetting.value;
 
     for (int i = 0; i < dates.length; i++) {

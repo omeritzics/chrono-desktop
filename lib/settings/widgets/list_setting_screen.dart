@@ -21,7 +21,8 @@ class CustomizableListSettingScreen<Item extends CustomizableListItem>
   final void Function(BuildContext context) onChanged;
 
   @override
-  State<CustomizableListSettingScreen> createState() => _CustomizableListSettingScreenState<Item>();
+  State<CustomizableListSettingScreen> createState() =>
+      _CustomizableListSettingScreenState<Item>();
 }
 
 class _CustomizableListSettingScreenState<Item extends CustomizableListItem>
@@ -33,11 +34,12 @@ class _CustomizableListSettingScreenState<Item extends CustomizableListItem>
 
     return await showModalBottomSheet(
       context: context,
-      builder: (context) => CustomizableListSettingAddBottomSheet(setting: widget.setting),
+      builder: (context) =>
+          CustomizableListSettingAddBottomSheet(setting: widget.setting),
     );
   }
 
-  _handleCustomizeItem(Item itemToCustomize) async {
+  Future<void> _handleCustomizeItem(Item itemToCustomize) async {
     openCustomizeScreen<Item>(
       context,
       CustomizeListItemScreen<Item>(

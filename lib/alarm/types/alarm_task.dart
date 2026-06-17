@@ -92,7 +92,8 @@ class AlarmTask extends CustomizableListItem {
   @override
   bool get isDeletable => true;
   AlarmTaskSchema get schema => _schema;
-  String Function(BuildContext) get getLocalizedName => _schema.getLocalizedName;
+  String Function(BuildContext) get getLocalizedName =>
+      _schema.getLocalizedName;
   @override
   SettingGroup get settings => _schema.settings;
   Widget Function(Function() onSolve) get builder => _schema.getBuilder;

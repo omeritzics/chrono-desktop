@@ -64,7 +64,7 @@ class ClockStopwatch extends JsonSerializable {
         _state = TimerState.stopped,
         _id = getId();
 
-  copyFrom(ClockStopwatch stopwatch) {
+  void copyFrom(ClockStopwatch stopwatch) {
     _elapsedMillisecondsOnPause = stopwatch._elapsedMillisecondsOnPause;
     _startTime = stopwatch._startTime;
     _state = stopwatch._state;

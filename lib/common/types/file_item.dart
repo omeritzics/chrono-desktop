@@ -37,9 +37,7 @@ class FileItem extends ListItem {
 
   @override
   FileItem.fromJson(Json json)
-      : _id = json != null
-            ? json['id'] ?? getId()
-            : getId(),
+      : _id = json != null ? json['id'] ?? getId() : getId(),
         _type = json != null
             ? json['type'] != null
                 ? FileItemType.values

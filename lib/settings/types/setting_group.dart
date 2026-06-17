@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:clock_app/common/data/weekdays.dart';
 import 'package:clock_app/common/types/json.dart';
 import 'package:clock_app/common/utils/list_storage.dart';
 import 'package:clock_app/developer/logic/logger.dart';
@@ -10,7 +9,6 @@ import 'package:clock_app/settings/types/setting_enable_condition.dart';
 import 'package:clock_app/settings/types/setting_item.dart';
 import 'package:clock_app/settings/types/setting_link.dart';
 import 'package:clock_app/settings/utils/description.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 

@@ -1,8 +1,4 @@
-
 enum ScheduledNotificationType {
   alarm,
   timer,
 }
-
-
-

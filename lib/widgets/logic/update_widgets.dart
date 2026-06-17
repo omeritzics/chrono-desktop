@@ -27,7 +27,7 @@ void setDigitalClockWidgetData(BuildContext context) async {
     final bool showMeridiem =
         timeSettingGroup.getSetting('Show Meridiem').value;
     final String separator =
-      timeSettingGroup.getSetting('Separator').value.toString();
+        timeSettingGroup.getSetting('Separator').value.toString();
     final String timeFormat = getTimeFormatString(
       context,
       appSettings
@@ -39,10 +39,10 @@ void setDigitalClockWidgetData(BuildContext context) async {
       separator: separator,
     );
     final String dateFormat = appSettings
-      .getGroup('General')
-      .getGroup('Display')
-      .getSetting('Long Date Format')
-      .value;
+        .getGroup('General')
+        .getGroup('Display')
+        .getSetting('Long Date Format')
+        .value;
 
     await HomeWidget.saveWidgetData("timeFormat", timeFormat);
     await HomeWidget.saveWidgetData("dateFormat", dateFormat);

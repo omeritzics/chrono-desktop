@@ -5,7 +5,7 @@ import 'package:clock_app/common/widgets/clock/digital_clock.dart';
 import 'package:flutter/material.dart';
 import 'package:timer_builder/timer_builder.dart';
 import 'package:timezone/timezone.dart' as timezone;
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class TimeZoneCard extends StatelessWidget {
   TimeZoneCard({
@@ -71,8 +71,8 @@ class TimeZoneCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   city.name,
-                  style: textTheme.displaySmall
-                      ?.copyWith(color: colorScheme.onSurface.withOpacity(0.8)),
+                  style: textTheme.displaySmall?.copyWith(
+                      color: colorScheme.onSurface.withValues(alpha: 0.8)),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   softWrap: false,
@@ -95,7 +95,7 @@ class TimeZoneCard extends StatelessWidget {
                     _getOffsetDescription(context),
                     style: textTheme.bodyMedium?.copyWith(
                         height: 0.5,
-                        color: colorScheme.onSurface.withOpacity(0.8)),
+                        color: colorScheme.onSurface.withValues(alpha: 0.8)),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     softWrap: false,

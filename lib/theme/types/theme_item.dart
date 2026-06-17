@@ -37,7 +37,7 @@ abstract class ThemeItem extends CustomizableListItem {
   }
 
   @override
-  void copyFrom(dynamic other){
+  void copyFrom(dynamic other) {
     _id = other._id;
     _isDefault = other._isDefault;
     _settings = other._settings.copy();

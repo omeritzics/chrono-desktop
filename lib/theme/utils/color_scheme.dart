@@ -15,8 +15,8 @@ import 'package:flutter/material.dart';
 
 ColorSchemeData getColorSchemeData(ColorScheme colorScheme) {
   return ColorSchemeData(
-    background: colorScheme.background,
-    onBackground: colorScheme.onBackground,
+    background: colorScheme.surface,
+    onBackground: colorScheme.onSurface,
     card: colorScheme.surface,
     onCard: colorScheme.onSurface,
     accent: colorScheme.primary,
@@ -39,24 +39,18 @@ ThemeData getTheme(
     {ColorScheme? colorScheme,
     ColorSchemeData? colorSchemeData,
     StyleTheme? styleTheme}) {
-SettingGroup appearanceSettings = appSettings
-      .getGroup("Appearance");
-      SettingGroup colorSettings = appearanceSettings.getGroup("Colors");
-      SettingGroup styleSettings = appearanceSettings.getGroup("Style");
+  SettingGroup appearanceSettings = appSettings.getGroup("Appearance");
+  SettingGroup colorSettings = appearanceSettings.getGroup("Colors");
+  SettingGroup styleSettings = appearanceSettings.getGroup("Style");
 
-  styleTheme ??= styleSettings.getSetting("Style Theme")
-      .value;
+  styleTheme ??= styleSettings.getSetting("Style Theme").value;
 
   colorSchemeData ??= colorScheme != null
       ? getColorSchemeData(colorScheme)
-      : colorSettings.getSetting("Color Scheme")
-          .value;
+      : colorSettings.getSetting("Color Scheme").value;
 
-  bool useMaterialYou = colorSettings.getSetting("Use Material You")
-      .value;
-  bool useMaterialStyle = styleSettings.getSetting("Use Material Style")
-      .value;
-
+  bool useMaterialYou = colorSettings.getSetting("Use Material You").value;
+  bool useMaterialStyle = styleSettings.getSetting("Use Material Style").value;
 
   if (styleTheme == null || colorSchemeData == null) {
     return defaultTheme;
@@ -70,7 +64,6 @@ SettingGroup appearanceSettings = appSettings
     scaffoldBackgroundColor: colorSchemeData.background,
     cardColor: colorSchemeData.card,
     radioTheme: getRadioTheme(colorSchemeData),
-    dialogBackgroundColor: colorSchemeData.card,
     bottomSheetTheme: getBottomSheetTheme(colorSchemeData, styleTheme),
     textTheme: defaultTheme.textTheme.apply(
       bodyColor: colorSchemeData.onBackground,
@@ -101,11 +94,12 @@ SettingGroup appearanceSettings = appSettings
                 borderWidth: styleTheme.borderWidth,
               ) ??
           const ThemeStyleExtension(),
-          defaultTheme.extension<ThemeSettingExtension>()?.copyWith(
+      defaultTheme.extension<ThemeSettingExtension>()?.copyWith(
                 useMaterialYou: useMaterialYou,
                 useMaterialStyle: useMaterialStyle,
-              ) ?? 
-              const ThemeSettingExtension(),
+              ) ??
+          const ThemeSettingExtension(),
     ],
+    dialogTheme: DialogThemeData(backgroundColor: colorSchemeData.card),
   );
 }

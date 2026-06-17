@@ -108,7 +108,7 @@ class _TimerCardState extends State<TimerCard> {
                         )
                       : Icon(
                           Icons.play_arrow_rounded,
-                          color: colorScheme.onSurface.withOpacity(0.6),
+                          color: colorScheme.onSurface.withValues(alpha: 0.6),
                           size: 32,
                         ),
                 )),
@@ -121,7 +121,7 @@ class _TimerCardState extends State<TimerCard> {
                   Text(
                     widget.timer.label,
                     style: textTheme.displaySmall?.copyWith(
-                      color: colorScheme.onBackground.withOpacity(0.6),
+                      color: colorScheme.onSurface.withValues(alpha: 0.6),
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,

@@ -11,9 +11,9 @@ String getTimeFormatString(BuildContext context, TimeFormat timeFormat,
     }
   }
 
-if (separator == "default") {
-  separator = ":";
-}
+  if (separator == "default") {
+    separator = ":";
+  }
 
   return timeFormat == TimeFormat.h12
       ? "h${separator}mm${showMeridiem ? " a" : ""}"

@@ -4,7 +4,6 @@ import 'package:clock_app/common/widgets/list/animated_reorderable_list/componen
 import 'package:clock_app/settings/data/general_settings_schema.dart';
 import 'package:clock_app/settings/data/settings_schema.dart';
 import 'package:clock_app/settings/types/setting.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -106,7 +105,6 @@ class _ListItemCardState<T> extends State<ListItemCard<T>> {
               // decoration: const BoxDecoration(),
               clipBehavior: Clip.hardEdge,
               child: ReorderableGridDragStartListener(
-
                 key: widget.key,
                 index: widget.index,
                 enabled: true,
@@ -115,7 +113,7 @@ class _ListItemCardState<T> extends State<ListItemCard<T>> {
                       const EdgeInsets.only(left: 8.0, top: 16.0, bottom: 16.0),
                   child: Icon(
                     Icons.drag_indicator,
-                    color: colorScheme.onSurface.withOpacity(0.6),
+                    color: colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
               ),

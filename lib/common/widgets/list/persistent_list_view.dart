@@ -3,7 +3,6 @@ import 'package:clock_app/common/types/list_filter.dart';
 import 'package:clock_app/common/types/list_item.dart';
 import 'package:clock_app/common/utils/list_storage.dart';
 import 'package:clock_app/common/widgets/list/custom_list_view.dart';
-import 'package:clock_app/developer/logic/logger.dart';
 import 'package:clock_app/settings/types/listener_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -78,7 +77,7 @@ class PersistentListView<Item extends ListItem> extends StatefulWidget {
     this.customActions = const [],
     this.sortOptions = const [],
     this.header,
-    this.onSaveItems ,
+    this.onSaveItems,
     // this.initialSortIndex = 0,
   });
 
@@ -96,7 +95,7 @@ class PersistentListView<Item extends ListItem> extends StatefulWidget {
   final bool reloadOnPop;
   final bool isSelectable;
   final bool shouldInsertOnTop;
-      final Widget? header;
+  final Widget? header;
   // final int initialSortIndex;
   final List<ListFilterItem<Item>> listFilters;
   final List<ListFilterCustomAction<Item>> customActions;
@@ -130,8 +129,7 @@ class _PersistentListViewState<Item extends ListItem>
         _initialSortIndex =
             int.parse(loadTextFileSync("${widget.saveTag}-sort-index"));
       }
-    }
-    else {
+    } else {
       _initialSortIndex = 0;
     }
   }
@@ -139,7 +137,7 @@ class _PersistentListViewState<Item extends ListItem>
   @override
   void dispose() {
     ListenerManager.removeOnChangeListener(widget.saveTag, _loadItems);
-    
+
     super.dispose();
   }
 
@@ -161,12 +159,11 @@ class _PersistentListViewState<Item extends ListItem>
     }
   }
 
-  void _saveItems () async {
+  void _saveItems() async {
     if (widget.saveTag.isNotEmpty) {
       await saveList<Item>(widget.saveTag, _items);
     }
     widget.onSaveItems?.call(_items);
-      
   }
 
   void _handleChangeSort(int index) {

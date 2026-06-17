@@ -97,7 +97,7 @@ class _NavScaffoldState extends State<NavScaffold> {
     setState(() {});
   }
 
-  _showNextScheduleSnackBar(Alarm alarm) {
+  void _showNextScheduleSnackBar(Alarm alarm) {
     Future.delayed(Duration.zero).then((value) {
       ScaffoldMessenger.of(context).removeCurrentSnackBar();
       DateTime? nextScheduleDateTime = alarm.currentScheduleDateTime;
@@ -191,7 +191,7 @@ class _NavScaffoldState extends State<NavScaffold> {
         theme.extension<ThemeSettingExtension>()!;
     ColorScheme colorScheme = theme.colorScheme;
 
-    TonalPalette tonalPalette = toTonalPalette(colorScheme.surface.value);
+    TonalPalette tonalPalette = toTonalPalette(colorScheme.surface.toARGB32());
 
     Color materialNavColor = themeSettings.useMaterialYou
         ? Color(tonalPalette
@@ -205,7 +205,7 @@ class _NavScaffoldState extends State<NavScaffold> {
                 titleWidget: Text(
                   tabs[_selectedTabIndex].title,
                   style: textTheme.titleMedium?.copyWith(
-                    color: colorScheme.onBackground.withOpacity(0.6),
+                    color: colorScheme.onSurface.withValues(alpha: 0.6),
                   ),
                 ),
                 systemNavBarColor:
@@ -222,7 +222,7 @@ class _NavScaffoldState extends State<NavScaffold> {
                     },
                     icon: const Icon(FluxIcons.settings,
                         semanticLabel: "Settings"),
-                    color: colorScheme.onBackground.withOpacity(0.8),
+                    color: colorScheme.onSurface.withValues(alpha: 0.8),
                   ),
                 ],
               )
@@ -263,7 +263,7 @@ class _NavScaffoldState extends State<NavScaffold> {
                   ],
                   leading: Text(tabs[_selectedTabIndex].title,
                       style: textTheme.headlineSmall?.copyWith(
-                        color: colorScheme.onBackground.withOpacity(0.6),
+                        color: colorScheme.onSurface.withValues(alpha: 0.6),
                       )),
                   trailing: IconButton(
                     onPressed: () {
@@ -276,7 +276,7 @@ class _NavScaffoldState extends State<NavScaffold> {
                     },
                     icon: const Icon(FluxIcons.settings,
                         semanticLabel: "Settings"),
-                    color: colorScheme.onBackground.withOpacity(0.8),
+                    color: colorScheme.onSurface.withValues(alpha: 0.8),
                   ),
                   selectedIndex: _selectedTabIndex,
                   onDestinationSelected: _onTabSelected,

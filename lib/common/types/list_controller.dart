@@ -77,5 +77,5 @@ class ListController<T> {
     return _getItemIndex?.call(item) ?? 0;
   }
 
-  List<T> getItems () => _getItems?.call() ?? [];
+  List<T> getItems() => _getItems?.call() ?? [];
 }

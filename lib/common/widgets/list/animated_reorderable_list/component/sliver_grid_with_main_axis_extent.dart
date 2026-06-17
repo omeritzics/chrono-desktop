@@ -29,21 +29,26 @@ class SliverReorderableGridWithMaxCrossAxisExtent
   /// For example, if the grid is vertical, the grid is 500.0 pixels wide, and
   /// [maxCrossAxisExtent] is 150.0, this delegate will create a grid with 4
   /// columns that are 125.0 pixels wide.
+  @override
   final double maxCrossAxisExtent;
 
   /// The number of logical pixels between each child along the main axis.
+  @override
   final double mainAxisSpacing;
 
   /// The number of logical pixels between each child along the cross axis.
+  @override
   final double crossAxisSpacing;
 
   /// The ratio of the cross-axis to the main-axis extent of each child.
+  @override
   final double childAspectRatio;
 
   /// The extent of each tile in the main axis. If provided it would define the
   /// logical pixels taken by each tile in the main-axis.
   ///
   /// If null, [childAspectRatio] is used instead.
+  @override
   final double? mainAxisExtent;
   int crossAxisCount = 0;
   double childCrossAxisExtent = 0.0;

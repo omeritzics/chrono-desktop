@@ -53,7 +53,7 @@ class _DialDurationPickerState extends State<DialDurationPicker> {
             snapDivisions: 60,
             bandWidth: bandWidth,
             fillColor:
-                Theme.of(context).colorScheme.onBackground.withOpacity(0.1),
+                Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.1),
           ),
         ),
         Positioned(
@@ -76,7 +76,7 @@ class _DialDurationPickerState extends State<DialDurationPicker> {
             snapDivisions: 60,
             bandWidth: bandWidth,
             fillColor:
-                Theme.of(context).colorScheme.onBackground.withOpacity(0.1),
+                Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.1),
           ),
         ),
         if (widget.showHours)
@@ -99,8 +99,10 @@ class _DialDurationPickerState extends State<DialDurationPicker> {
               divisions: 8,
               snapDivisions: 24,
               bandWidth: bandWidth,
-              fillColor:
-                  Theme.of(context).colorScheme.onBackground.withOpacity(0.1),
+              fillColor: Theme.of(context)
+                  .colorScheme
+                  .onSurface
+                  .withValues(alpha: 0.1),
             ),
           ),
       ],
@@ -174,7 +176,7 @@ class _TimerKnobState extends State<TimerKnob> {
           maxValue: widget.maxValue,
           knobColor: Theme.of(context).colorScheme.primary,
           knobTextColor: Theme.of(context).colorScheme.onPrimary,
-          textColor: Theme.of(context).colorScheme.onBackground,
+          textColor: Theme.of(context).colorScheme.onSurface,
         ),
       ),
     );

@@ -13,13 +13,12 @@ class AlarmEventCard extends StatelessWidget {
     TextTheme textTheme = themeData.textTheme;
     ColorScheme colorScheme = themeData.colorScheme;
 
-    Color textColor = colorScheme.onSurface.withOpacity(0.8);
+    Color textColor = colorScheme.onSurface.withValues(alpha: 0.8);
 
     return Padding(
-      padding: const EdgeInsets.only(
-          left: 16.0, right: 16.0, top: 8.0, bottom: 8.0),
+      padding:
+          const EdgeInsets.only(left: 16.0, right: 16.0, top: 8.0, bottom: 8.0),
       child: Column(
-        
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

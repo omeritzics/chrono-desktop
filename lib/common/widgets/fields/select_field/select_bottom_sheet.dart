@@ -4,9 +4,8 @@ import 'package:clock_app/common/types/select_choice.dart';
 import 'package:clock_app/common/widgets/fields/select_field/option_cards/audio_option_card.dart';
 import 'package:clock_app/common/widgets/fields/select_field/option_cards/color_option_card.dart';
 import 'package:clock_app/common/widgets/fields/select_field/option_cards/text_option_card.dart';
-import 'package:clock_app/icons/flux_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class SelectBottomSheet extends StatelessWidget {
   const SelectBottomSheet({
@@ -103,7 +102,7 @@ class SelectBottomSheet extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(64),
-                    color: colorScheme.onSurface.withOpacity(0.6)),
+                    color: colorScheme.onSurface.withValues(alpha: 0.6)),
               ),
             ),
             const SizedBox(height: 12.0),
@@ -120,7 +119,8 @@ class SelectBottomSheet extends StatelessWidget {
                         child: Text(
                           title,
                           style: textTheme.titleMedium?.copyWith(
-                              color: colorScheme.onSurface.withOpacity(0.6)),
+                              color:
+                                  colorScheme.onSurface.withValues(alpha: 0.6)),
                           textAlign: actions.isEmpty ? TextAlign.center : null,
                         ),
                       ),
@@ -141,7 +141,7 @@ class SelectBottomSheet extends StatelessWidget {
                     Text(
                       description!,
                       style: textTheme.bodyMedium?.copyWith(
-                          color: colorScheme.onSurface.withOpacity(0.6)),
+                          color: colorScheme.onSurface.withValues(alpha: 0.6)),
                     ),
                 ],
               ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:clock_app/l10n/app_localizations.dart';
 
 class ModalAction {
   final String title;
@@ -42,7 +41,7 @@ class Modal extends StatelessWidget {
           ? Text(
               title!,
               style: textTheme.displaySmall?.copyWith(
-                color: colorScheme.onBackground.withOpacity(0.6),
+                color: colorScheme.onSurface.withValues(alpha: 0.6),
               ),
             )
           : null,
@@ -57,7 +56,7 @@ class Modal extends StatelessWidget {
             TextButton(
               child: Text(AppLocalizations.of(context)!.cancelButton,
                   style: textTheme.labelMedium?.copyWith(
-                      color: colorScheme.onBackground.withOpacity(0.6))),
+                      color: colorScheme.onSurface.withValues(alpha: 0.6))),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -80,7 +79,7 @@ class Modal extends StatelessWidget {
                 style: textTheme.labelMedium?.copyWith(
                   color: isSaveEnabled
                       ? colorScheme.primary
-                      : colorScheme.onBackground.withOpacity(0.4),
+                      : colorScheme.onSurface.withValues(alpha: 0.4),
                 ),
               ),
               onPressed: () {

@@ -4,7 +4,6 @@ import 'package:clock_app/settings/data/settings_schema.dart';
 import 'package:clock_app/timer/logic/get_duration_picker.dart';
 import 'package:clock_app/timer/types/time_duration.dart';
 import 'package:clock_app/timer/types/timer_preset.dart';
-import 'package:clock_app/timer/widgets/dial_duration_picker.dart';
 import 'package:flutter/material.dart';
 
 Future<TimerPreset?> showTimerPresetPicker(BuildContext context,
